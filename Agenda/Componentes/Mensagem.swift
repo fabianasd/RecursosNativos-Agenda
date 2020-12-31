@@ -2,8 +2,8 @@
 //  Mensagem.swift
 //  Agenda
 //
-//  Created by Gabriel Petrovick on 29/12/20.
-//  Copyright © 2020 Alura. All rights reserved.
+//  Created by Fabiana Petrovick on 29/12/20.
+//  Copyright © 2020 Fabiana Petrovick. All rights reserved.
 //
 
 import UIKit
