@@ -9,21 +9,30 @@
 import UIKit
 
 class CalculaMediaAPI: NSObject {
-    func calculaMediaGeralDosAlunos() {
+    func calculaMediaGeralDosAlunos(alunos:Array<Aluno>, sucesso:@escaping(_ dicionarioDeMedias:Dictionary<String, Any>) -> Void, falha:@escaping(_ error:Error) -> Void) {
         
         guard let url = URL(string: "https://www.caelum.com.br/mobile") else { return }
         var listaDeAlunos:Array<Dictionary<String, Any>> = []
         var json:Dictionary<String, Any> = [:]
         
-        let dicionarioDeAlunos = [
-            "id": "1",
-            "nome": "Fabiana",
-            "endereco": "Rua new york, Belo Horizonte",
-            "telefone": "1234-5678",
-            "site": "www.site.com.br",
-            "nota": "10"
-        ]
-        listaDeAlunos.append(dicionarioDeAlunos as [String:Any])
+        for aluno in alunos {
+            
+            guard let nome = aluno.nome else { break }
+            guard let endereco = aluno.endereco else { break }
+            guard let telefone = aluno.telefone else { break }
+            guard let site = aluno.site else { break }
+            
+            
+            let dicionarioDeAlunos = [
+                "id": "\(aluno.objectID)",
+                "nome": nome,
+                "endereco": endereco,
+                "telefone": telefone,
+                "site": site,
+                "nota": String(aluno.nota)
+            ]
+            listaDeAlunos.append(dicionarioDeAlunos as [String:Any])
+        }
         
         json = [
             "list": [
@@ -42,10 +51,10 @@ class CalculaMediaAPI: NSObject {
             { (data, response, error) in
                 if error == nil {
                     do {
-                        let dicionario = try JSONSerialization.jsonObject(with: data!, options: [])
-                        print(dicionario)
+                        let dicionario = try JSONSerialization.jsonObject(with: data!, options: []) as! Dictionary<String, Any>
+                        sucesso(dicionario)
                     } catch {
-                        print(error.localizedDescription)
+                        falha(error)
                     }
                 }
             })
