@@ -18,6 +18,8 @@ class MapaViewController: UIViewController {
     // MARK: - Variavel
     
     var aluno:Aluno?
+    lazy var localizacao = Localizacao()
+//    lazy var gerenciadorDeLocalizacao = CLLocationManager()
     
     // MARK: - View Lifecycle
     
@@ -26,6 +28,7 @@ class MapaViewController: UIViewController {
         self.navigationItem.title = getTitulo()
         localizacaoInicial()
         localizarAluno()
+        mapa.delegate = localizacao
     }
     
     // MARK: - Metodos
@@ -37,7 +40,8 @@ class MapaViewController: UIViewController {
     func localizacaoInicial() {
         Localizacao().converteEnderecoEmCoordenadas(endereco: "FPM - Patos de Minas")
         { (localizacaoEncontrada)  in
-            let pino = self.configuraPino(titulo: "FPM", localizacao: localizacaoEncontrada)
+            //  let pino = self.configuraPino(titulo: "FPM", localizacao: localizacaoEncontrada)
+            let pino = Localizacao().configuraPino(titulo: "Caelum", localizacao: localizacaoEncontrada, cor: .black, icone: UIImage(named: "icon2.png"))
             let regiao = MKCoordinateRegionMakeWithDistance(pino.coordinate, 5000, 5000)
             self.mapa.setRegion(regiao, animated: true)
             self.mapa.addAnnotation(pino)
@@ -47,18 +51,14 @@ class MapaViewController: UIViewController {
     func localizarAluno() {
         if let aluno = aluno {
             Localizacao().converteEnderecoEmCoordenadas(endereco: aluno.endereco!, local: { (localizacaoEncontrada) in
-                let pino = self.configuraPino(titulo: aluno.nome!, localizacao: localizacaoEncontrada)
+                //  let pino = self.configuraPino(titulo: aluno.nome!, localizacao: localizacaoEncontrada)
+                let pino = Localizacao().configuraPino(titulo: aluno.nome!, localizacao: localizacaoEncontrada, cor: nil, icone: nil)
                 self.mapa.addAnnotation(pino)
+                self.mapa.showAnnotations(self.mapa.annotations, animated: true)
             })
-    }
-    }
-    
-    func configuraPino(titulo:String, localizacao:CLPlacemark) -> MKPointAnnotation {
-        let pino = MKPointAnnotation()
-        pino.title = titulo
-        pino.coordinate = localizacao.location!.coordinate
-        
-        
-        return pino
+        }
     }
 }
+
+
+

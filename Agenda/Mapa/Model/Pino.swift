@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class Pino: NSObject {
+class Pino: NSObject, MKAnnotation {
     
     var title: String?
     var icon: UIImage?

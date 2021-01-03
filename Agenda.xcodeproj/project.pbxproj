@@ -24,6 +24,7 @@
 		0C719E4D259C1AB0002F0729 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C719E4C259C1AB0002F0729 /* MapaViewController.swift */; };
 		0C88B3722593C0E0001C59BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88B3712593C0E0001C59BE /* ImagePicker.swift */; };
 		0CEA825625A157050015D014 /* Pino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA825525A157050015D014 /* Pino.swift */; };
+		0CEA826325A16A0D0015D014 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CEA826225A16A0D0015D014 /* icon2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0C719E4C259C1AB0002F0729 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		0C88B3712593C0E0001C59BE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0CEA825525A157050015D014 /* Pino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pino.swift; sourceTree = "<group>"; };
+		0CEA826225A16A0D0015D014 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				03AA17691FC84A2D003CB2B8 /* Alunos */,
 				0C719E4A259C1A61002F0729 /* Mapa */,
 				0C88B3702593C0C6001C59BE /* Componentes */,
+				0CEA825925A15DFE0015D014 /* Assets */,
 				03AA174D1FC84154003CB2B8 /* AppDelegate.swift */,
 				03AA17511FC84154003CB2B8 /* Main.storyboard */,
 				03AA17571FC84154003CB2B8 /* Assets.xcassets */,
@@ -188,6 +191,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0CEA825925A15DFE0015D014 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0CEA826225A16A0D0015D014 /* icon2.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +261,7 @@
 				03AA175B1FC84154003CB2B8 /* LaunchScreen.storyboard in Resources */,
 				03AA17581FC84154003CB2B8 /* Assets.xcassets in Resources */,
 				03AA17531FC84154003CB2B8 /* Main.storyboard in Resources */,
+				0CEA826325A16A0D0015D014 /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
