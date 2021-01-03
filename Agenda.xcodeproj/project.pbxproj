@@ -23,6 +23,7 @@
 		0C719E49259C0EB1002F0729 /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C719E48259C0EB1002F0729 /* Localizacao.swift */; };
 		0C719E4D259C1AB0002F0729 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C719E4C259C1AB0002F0729 /* MapaViewController.swift */; };
 		0C88B3722593C0E0001C59BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88B3712593C0E0001C59BE /* ImagePicker.swift */; };
+		0CEA825625A157050015D014 /* Pino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA825525A157050015D014 /* Pino.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0C719E48259C0EB1002F0729 /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		0C719E4C259C1AB0002F0729 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		0C88B3712593C0E0001C59BE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0CEA825525A157050015D014 /* Pino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pino.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		0C719E4A259C1A61002F0729 /* Mapa */ = {
 			isa = PBXGroup;
 			children = (
+				0CEA825425A156ED0015D014 /* Model */,
 				0C719E4B259C1A8F002F0729 /* Controller */,
 			);
 			path = Mapa;
@@ -175,6 +178,14 @@
 				0C694E6325A00F69002080F7 /* AutenticacaoLocal.swift */,
 			);
 			path = Componentes;
+			sourceTree = "<group>";
+		};
+		0CEA825425A156ED0015D014 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CEA825525A157050015D014 /* Pino.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03AA176D1FC8515A003CB2B8 /* AlunoViewController.swift in Sources */,
+				0CEA825625A157050015D014 /* Pino.swift in Sources */,
 				03AA17661FC84353003CB2B8 /* HomeTableViewController.swift in Sources */,
 				03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */,
 				0C88B3722593C0E0001C59BE /* ImagePicker.swift in Sources */,
